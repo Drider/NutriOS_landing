@@ -1,0 +1,15 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.revealDelay1 { transition-delay: 0.08s; }
+.revealDelay2 { transition-delay: 0.16s; }
+.revealDelay3 { transition-delay: 0.24s; }
