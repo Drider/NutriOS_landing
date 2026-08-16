@@ -15,7 +15,12 @@ export function Assistant() {
     <section id="assistant" className={styles.section} aria-labelledby="assistant-heading">
       <Container>
         <div className={styles.layout}>
-          <SectionHeading as="h2" title={assistant.title} description={assistant.description} />
+          <SectionHeading
+            as="h2"
+            id="assistant-heading"
+            title={assistant.title}
+            description={assistant.description}
+          />
 
           <Card ref={ref} className={`${styles.conversation} ${animations.reveal} ${isVisible ? animations.isVisible : ''}`}>
             {assistant.conversation.map((message, index) => (

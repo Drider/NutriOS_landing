@@ -14,7 +14,7 @@ export function Context() {
   return (
     <section id="context" className={styles.section} aria-labelledby="context-heading">
       <Container>
-        <SectionHeading as="h2" title={context.title} description={context.description} />
+        <SectionHeading as="h2" id="context-heading" title={context.title} description={context.description} />
 
         <div
           ref={ref}

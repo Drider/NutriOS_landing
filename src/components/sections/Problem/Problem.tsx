@@ -13,7 +13,7 @@ export function Problem() {
   return (
     <section id="problem" className={styles.section} aria-labelledby="problem-heading">
       <Container>
-        <SectionHeading as="h2" title={problem.title} description={problem.description} />
+        <SectionHeading as="h2" id="problem-heading" title={problem.title} description={problem.description} />
 
         <div
           ref={ref}

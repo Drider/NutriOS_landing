@@ -14,7 +14,13 @@ export function FinalCTA() {
     <section id="waitlist" className={styles.section} aria-labelledby="final-cta-heading">
       <Container>
         <div className={styles.wrapper}>
-          <SectionHeading as="h2" title={finalCta.title} description={finalCta.description} align="center" />
+          <SectionHeading
+            as="h2"
+            id="final-cta-heading"
+            title={finalCta.title}
+            description={finalCta.description}
+            align="center"
+          />
 
           {status === 'success' ? (
             <p className={styles.success} role="status">

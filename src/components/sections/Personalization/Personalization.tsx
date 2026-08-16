@@ -16,7 +16,12 @@ export function Personalization() {
       <Container>
         <div className={styles.layout}>
           <div>
-            <SectionHeading as="h2" title={personalization.title} description={personalization.description} />
+            <SectionHeading
+              as="h2"
+              id="personalization-heading"
+              title={personalization.title}
+              description={personalization.description}
+            />
 
             <ol className={styles.progression}>
               {personalization.progression.map((step, index) => (

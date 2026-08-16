@@ -14,7 +14,7 @@ export function ProductPreview() {
   return (
     <section id="product-preview" className={styles.section} aria-labelledby="product-preview-heading">
       <Container>
-        <SectionHeading as="h2" title={productPreview.title} align="center" />
+        <SectionHeading as="h2" id="product-preview-heading" title={productPreview.title} align="center" />
 
         <div
           ref={ref}

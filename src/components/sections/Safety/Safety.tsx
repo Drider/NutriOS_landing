@@ -11,7 +11,7 @@ export function Safety() {
     <section id="safety" className={styles.section} aria-labelledby="safety-heading">
       <Container>
         <div className={styles.wrapper}>
-          <SectionHeading as="h2" title={safety.title} align="center" />
+          <SectionHeading as="h2" id="safety-heading" title={safety.title} align="center" />
           <p className={styles.disclaimer}>{safety.shortDisclaimer}</p>
         </div>
       </Container>

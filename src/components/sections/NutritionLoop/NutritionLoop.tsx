@@ -14,7 +14,7 @@ export function NutritionLoop() {
   return (
     <section id="nutrition-loop" className={styles.section} aria-labelledby="nutrition-loop-heading">
       <Container>
-        <SectionHeading as="h2" title={nutritionLoop.title} align="center" />
+        <SectionHeading as="h2" id="nutrition-loop-heading" title={nutritionLoop.title} align="center" />
 
         <div
           ref={ref}
