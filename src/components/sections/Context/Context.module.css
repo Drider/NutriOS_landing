@@ -1,0 +1,74 @@
+.section {
+  padding-block: var(--space-9);
+  background: var(--color-surface-muted);
+}
+
+.convergence {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.elements {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.elementCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.elementTitle {
+  font-size: var(--font-size-lg);
+}
+
+.elementDescription {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.chainArrow {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+}
+
+.outcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.convergeLabel {
+  font-weight: 800;
+  font-size: var(--font-size-xl);
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border-radius: var(--radius-pill);
+}
+
+.outcomeLabel {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
+@media (min-width: 768px) {
+  .elements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .elements {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
