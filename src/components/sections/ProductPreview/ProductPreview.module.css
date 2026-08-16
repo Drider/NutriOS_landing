@@ -1,0 +1,10 @@
+.section {
+  padding-block: var(--space-9);
+  background: var(--color-surface-muted);
+}
+
+.shellWrapper {
+  margin-top: var(--space-8);
+  max-width: 960px;
+  margin-inline: auto;
+}
