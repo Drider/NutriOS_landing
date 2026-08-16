@@ -1,0 +1,31 @@
+.shell {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .body {
+    flex-direction: row;
+  }
+}
+
+.main {
+  flex: 1;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.greeting {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
