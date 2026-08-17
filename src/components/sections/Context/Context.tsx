@@ -29,7 +29,7 @@ export function Context() {
             ))}
           </div>
 
-          <div className={styles.outcomeChain} aria-hidden="true">
+          <div aria-hidden="true">
             <span className={styles.chainArrow}>↓</span>
           </div>
 

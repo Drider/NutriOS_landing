@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { Container } from '../../layout/Container/Container'
 import { SectionHeading } from '../../ui/SectionHeading/SectionHeading'
 import { Input } from '../../ui/Input/Input'
@@ -9,6 +10,13 @@ import styles from './FinalCTA.module.css'
 export function FinalCTA() {
   const { finalCta } = landingContent
   const { email, setEmail, status, errorMessage, handleSubmit } = useWaitlistForm()
+  const successRef = useRef<HTMLParagraphElement>(null)
+
+  useEffect(() => {
+    if (status === 'success') {
+      successRef.current?.focus()
+    }
+  }, [status])
 
   return (
     <section id="waitlist" className={styles.section} aria-labelledby="final-cta-heading">
@@ -22,11 +30,11 @@ export function FinalCTA() {
             align="center"
           />
 
-          {status === 'success' ? (
-            <p className={styles.success} role="status">
-              {finalCta.successMessage}
-            </p>
-          ) : (
+          <p className={styles.success} role="status" aria-live="polite" tabIndex={-1} ref={successRef}>
+            {status === 'success' ? finalCta.successMessage : ''}
+          </p>
+
+          {status !== 'success' ? (
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
               <Input
                 label={finalCta.emailLabel}
@@ -43,7 +51,7 @@ export function FinalCTA() {
                 {status === 'loading' ? finalCta.loadingLabel : finalCta.submitLabel}
               </Button>
             </form>
-          )}
+          ) : null}
         </div>
       </Container>
     </section>

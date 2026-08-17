@@ -6,7 +6,7 @@ export function ProductHeader({ searchLabel, profileLabel }: { searchLabel: stri
       <span className={styles.brand}>NutriOS</span>
       <div className={styles.actions}>
         <span className={styles.action}>{searchLabel}</span>
-        <span className={styles.avatar} aria-label={profileLabel} title={profileLabel} />
+        <span className={styles.avatar} title={profileLabel} />
       </div>
     </div>
   )

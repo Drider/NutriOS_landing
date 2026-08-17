@@ -8,7 +8,7 @@ interface PersonalContextProps {
 export function PersonalContext({ label, items }: PersonalContextProps) {
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.heading}>{label}</h3>
+      <p className={styles.heading}>{label}</p>
       <ul className={styles.list}>
         {items.map((item) => (
           <li key={item} className={styles.item}>

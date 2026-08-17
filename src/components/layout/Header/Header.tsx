@@ -23,14 +23,19 @@ export function Header() {
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
-        setIsMenuOpen(false)
-        triggerRef.current?.focus()
+        closeMenu()
         return
       }
 
       if (event.key === 'Tab' && focusableEls.length > 0) {
         const first = focusableEls[0]
         const last = focusableEls[focusableEls.length - 1]
+
+        if (menuNode && !menuNode.contains(document.activeElement)) {
+          event.preventDefault()
+          first.focus()
+          return
+        }
 
         if (event.shiftKey && document.activeElement === first) {
           event.preventDefault()
@@ -51,6 +56,7 @@ export function Header() {
 
   function closeMenu() {
     setIsMenuOpen(false)
+    triggerRef.current?.focus()
   }
 
   return (

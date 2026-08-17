@@ -14,7 +14,7 @@ interface MealPlanProps {
 export function MealPlan({ planLabel, meals }: MealPlanProps) {
   return (
     <div>
-      <h3 className={styles.heading}>{planLabel}</h3>
+      <p className={styles.heading}>{planLabel}</p>
       <ul className={styles.list}>
         {meals.map((meal) => (
           <li key={meal.key} className={styles.mealCard}>
