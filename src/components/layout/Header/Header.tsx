@@ -1,5 +1,6 @@
 // src/components/layout/Header/Header.tsx
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Container } from '../Container/Container'
 import { Button } from '../../ui/Button/Button'
 import { landingContent } from '../../../data/landing'
@@ -94,30 +95,33 @@ export function Header() {
         </div>
       </Container>
 
-      {isMenuOpen ? (
-        <div className={styles.overlay}>
-          <div id="mobile-menu" ref={menuRef} className={styles.mobileMenu} role="dialog" aria-modal="true" aria-label="Мобильное меню">
-            <div className={styles.mobileMenuHeader}>
-              <span className={styles.logo}>{landingContent.logo}</span>
-              <button type="button" className={styles.menuClose} onClick={closeMenu} aria-label="Закрыть меню">
-                Закрыть
-              </button>
-            </div>
+      {isMenuOpen
+        ? createPortal(
+            <div className={styles.overlay}>
+              <div id="mobile-menu" ref={menuRef} className={styles.mobileMenu} role="dialog" aria-modal="true" aria-label="Мобильное меню">
+                <div className={styles.mobileMenuHeader}>
+                  <span className={styles.logo}>{landingContent.logo}</span>
+                  <button type="button" className={styles.menuClose} onClick={closeMenu} aria-label="Закрыть меню">
+                    Закрыть
+                  </button>
+                </div>
 
-            <nav className={styles.mobileNav} aria-label="Мобильная навигация">
-              {landingContent.nav.map((link) => (
-                <a key={link.href} href={link.href} className={styles.mobileNavLink} onClick={closeMenu}>
-                  {link.label}
-                </a>
-              ))}
-            </nav>
+                <nav className={styles.mobileNav} aria-label="Мобильная навигация">
+                  {landingContent.nav.map((link) => (
+                    <a key={link.href} href={link.href} className={styles.mobileNavLink} onClick={closeMenu}>
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
 
-            <Button as="a" href="#waitlist" variant="primary" onClick={closeMenu}>
-              {landingContent.headerCta}
-            </Button>
-          </div>
-        </div>
-      ) : null}
+                <Button as="a" href="#waitlist" variant="primary" onClick={closeMenu}>
+                  {landingContent.headerCta}
+                </Button>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </header>
   )
 }
