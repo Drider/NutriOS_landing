@@ -1,6 +1,9 @@
 .section {
+  color: var(--color-on-dark);
+}
+
+.backdrop {
   padding-block: var(--space-9);
-  background: var(--color-surface-muted);
 }
 
 .shellWrapper {

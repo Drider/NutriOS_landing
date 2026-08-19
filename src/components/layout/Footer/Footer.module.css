@@ -11,8 +11,23 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
   font-size: var(--font-size-lg);
-  font-weight: 800;
+}
+
+.logoMark {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  display: grid;
+  place-items: center;
 }
 
 .links {
@@ -28,7 +43,7 @@
 }
 
 .link:hover {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .disclaimer {

@@ -10,9 +10,18 @@ export function Safety() {
   return (
     <section id="safety" className={styles.section} aria-labelledby="safety-heading">
       <Container>
-        <div className={styles.wrapper}>
-          <SectionHeading as="h2" id="safety-heading" title={safety.title} align="center" />
-          <p className={styles.disclaimer}>{safety.shortDisclaimer}</p>
+        <div className={styles.layout}>
+          <SectionHeading
+            as="h2"
+            id="safety-heading"
+            eyebrow={safety.eyebrow}
+            icon="shield"
+            title={safety.title}
+            description={safety.shortDisclaimer}
+          />
+          <div className={styles.panel}>
+            <p className={styles.extended}>{safety.extendedDisclaimer}</p>
+          </div>
         </div>
       </Container>
     </section>

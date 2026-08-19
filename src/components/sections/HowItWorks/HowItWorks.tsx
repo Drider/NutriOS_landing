@@ -14,7 +14,13 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className={styles.section} aria-labelledby="how-it-works-heading">
       <Container>
-        <SectionHeading as="h2" id="how-it-works-heading" title={howItWorks.title} align="center" />
+        <SectionHeading
+          as="h2"
+          id="how-it-works-heading"
+          eyebrow={howItWorks.eyebrow}
+          title={howItWorks.title}
+          align="center"
+        />
 
         <div
           ref={ref}

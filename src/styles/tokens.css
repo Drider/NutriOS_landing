@@ -1,27 +1,43 @@
 :root {
-  --color-bg: #FAF7F2;
-  --color-surface: #FFFFFF;
-  --color-surface-muted: #F1ECE3;
-  --color-text: #23241F;
-  --color-text-muted: #676A61;
-  --color-text-on-accent: #FFFFFF;
-  --color-accent: #3F6B4A;
-  --color-accent-hover: #345A3E;
-  --color-accent-soft: #E6EDE7;
-  --color-border: #E7E1D6;
+  --color-bg: #F3F8F2;
+  --color-surface: #E6F0E6;
+  --color-text: #18211B;
+  --color-text-muted: color-mix(in srgb, var(--color-text) 70%, transparent);
+  --color-text-on-accent: var(--color-bg);
+
+  --color-accent: #2F8050;
+  --color-accent-hover: #2B7249;
+  --color-accent-active: #205537;
+  --color-accent-soft: #E7F5EC;
+
+  --color-accent-2: #6F9E78;
+  --color-accent-2-soft: #EEF6EF;
+
+  --color-border: color-mix(in srgb, var(--color-text) 13%, transparent);
   --color-danger: #B3423A;
   --color-danger-soft: #F7E9E7;
 
-  --font-sans: 'Manrope Variable', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Dark feature-section treatment — used sparingly for the product preview and final CTA */
+  --gradient-dark: radial-gradient(120% 130% at 88% 8%, #255A3C 0%, transparent 52%),
+    linear-gradient(158deg, #152A1E 0%, #1A3627 52%, #101D15 100%);
+  --gradient-dark-soft: radial-gradient(130% 130% at 90% 10%, #2A6344 0%, transparent 58%),
+    linear-gradient(155deg, #163020 0%, #101D15 100%);
+  --color-on-dark: #F3F8F2;
+  --color-on-dark-muted: color-mix(in srgb, var(--color-on-dark) 78%, transparent);
+
+  --font-heading: 'Marmelad', system-ui, sans-serif;
+  --font-heading-weight: 400;
+  --font-sans: 'Nunito Variable', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --radius-sm: 8px;
-  --radius-md: 14px;
+  --radius-md: 16px;
   --radius-lg: 24px;
+  --radius-xl: 28px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 1px 2px rgba(35, 36, 31, 0.06);
-  --shadow-md: 0 8px 24px rgba(35, 36, 31, 0.08);
-  --shadow-lg: 0 24px 48px rgba(35, 36, 31, 0.10);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, var(--color-text) 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, var(--color-text) 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, var(--color-text) 22%, transparent);
 
   --container-max-width: 1200px;
   --container-padding: clamp(1.25rem, 4vw, 2.5rem);
@@ -44,12 +60,12 @@
   --font-size-3xl: 2.25rem;
   --font-size-4xl: 3rem;
 
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.7;
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.55;
+  --line-height-relaxed: 1.6;
 
   --transition-fast: 0.15s ease;
-  --transition-base: 0.3s ease;
+  --transition-base: 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
 
   --header-height: 72px;
 }

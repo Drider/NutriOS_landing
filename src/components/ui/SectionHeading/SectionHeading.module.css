@@ -12,6 +12,17 @@
   margin-inline: auto;
 }
 
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-accent-active);
+}
+
 .title {
   font-size: var(--font-size-3xl);
 }
@@ -26,4 +37,16 @@
   color: var(--color-text-muted);
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
+}
+
+.dark .title {
+  color: var(--color-on-dark);
+}
+
+.dark .description {
+  color: var(--color-on-dark-muted);
+}
+
+.dark .eyebrow {
+  color: var(--color-accent-2);
 }

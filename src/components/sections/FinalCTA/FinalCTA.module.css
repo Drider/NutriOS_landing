@@ -1,4 +1,8 @@
 .section {
+  color: var(--color-on-dark);
+}
+
+.backdrop {
   padding-block: var(--space-9);
 }
 
@@ -20,10 +24,19 @@
 }
 
 .success {
-  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.successPill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+  border-radius: var(--radius-pill);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-base);
   font-weight: 600;
-  color: var(--color-accent);
-  max-width: 480px;
 }
 
 @media (min-width: 768px) {

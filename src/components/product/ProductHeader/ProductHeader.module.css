@@ -1,30 +1,28 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-3);
 }
 
-.brand {
-  font-weight: 800;
-}
-
-.actions {
+.search {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-}
-
-.action {
-  font-size: var(--font-size-sm);
+  gap: var(--space-2);
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-4);
   color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
 }
 
 .avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  display: inline-block;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-2-soft);
+  color: var(--color-accent-active);
+  display: grid;
+  place-items: center;
 }

@@ -13,6 +13,7 @@ export const landingContent: LandingContent = {
   ],
   headerCta: 'Записаться в лист ожидания',
   hero: {
+    eyebrow: 'Персональная система питания',
     title: 'Питание — это не план. Это система.',
     description:
       'NutriOS помогает планировать питание с учётом ваших целей, предпочтений, привычек и реальной жизни.',
@@ -37,6 +38,7 @@ export const landingContent: LandingContent = {
     },
   },
   problem: {
+    eyebrow: 'Проблема',
     title: 'Питаться правильно не должно быть второй работой.',
     description:
       'Информации о питании более чем достаточно. Сложность — превратить её в повседневные решения, которые действительно вписываются в вашу жизнь.',
@@ -53,6 +55,7 @@ export const landingContent: LandingContent = {
     contrastSteps: ['Ваш контекст', 'Практичные решения'],
   },
   context: {
+    eyebrow: 'Контекст',
     title: 'Построен вокруг вашего контекста.',
     description:
       'NutriOS объединяет ваши цели, предпочтения, историю и повседневные ограничения в единую персональную систему питания.',
@@ -87,6 +90,7 @@ export const landingContent: LandingContent = {
     outcomeLabel: 'Практичные решения о питании',
   },
   howItWorks: {
+    eyebrow: 'Как это работает',
     title: 'От контекста к действию.',
     steps: [
       {
@@ -107,6 +111,7 @@ export const landingContent: LandingContent = {
     ],
   },
   productPreview: {
+    eyebrow: 'Превью продукта',
     title: 'Система питания, которая помнит контекст.',
     sidebarLinks: ['Сегодня', 'План', 'Блюда', 'Покупки', 'История'],
     headerLabels: { search: 'Поиск', profile: 'Профиль' },
@@ -123,6 +128,7 @@ export const landingContent: LandingContent = {
     assistantPrompt: 'Что изменить на сегодняшний вечер?',
   },
   personalization: {
+    eyebrow: 'Персонализация',
     title: 'Чем больше контекста — тем полезнее система.',
     description:
       'NutriOS не начинает каждый день с чистого листа. Ваши предпочтения и история становятся частью системы.',
@@ -137,6 +143,7 @@ export const landingContent: LandingContent = {
     recommendationValue: 'Быстрый ужин с учётом ваших предпочтений',
   },
   assistant: {
+    eyebrow: 'Ассистент',
     title: 'Спросите свою систему питания.',
     description:
       'Получайте практичные ответы на основе вашего личного контекста — а не обобщённый диалог.',
@@ -155,6 +162,7 @@ export const landingContent: LandingContent = {
     ],
   },
   nutritionLoop: {
+    eyebrow: 'Цикл питания',
     title: 'Единая система. От планирования до покупок.',
     loopSteps: [
       'План',
@@ -173,6 +181,7 @@ export const landingContent: LandingContent = {
     ],
   },
   safety: {
+    eyebrow: 'О проекте',
     title: 'Создано для повседневного благополучия.',
     shortDisclaimer:
       'NutriOS — продукт в области веллнеса и просвещения о питании. Он не является медицинским сервисом и не предоставляет диагностику, лечение или медицинские консультации.',

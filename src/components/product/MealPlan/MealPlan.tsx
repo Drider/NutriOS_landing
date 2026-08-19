@@ -17,7 +17,8 @@ export function MealPlan({ planLabel, meals }: MealPlanProps) {
       <p className={styles.heading}>{planLabel}</p>
       <ul className={styles.list}>
         {meals.map((meal) => (
-          <li key={meal.key} className={styles.mealCard}>
+          <li key={meal.key} className={styles.mealRow}>
+            <span className={styles.dot} aria-hidden="true" />
             <span className={styles.mealLabel}>{meal.label}</span>
             <span className={styles.mealTime}>{meal.time}</span>
           </li>

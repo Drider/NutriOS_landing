@@ -6,8 +6,9 @@
   padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
   font-size: var(--font-size-base);
-  font-weight: 600;
   cursor: pointer;
   transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
   text-decoration: none;
@@ -16,6 +17,11 @@
 
 .button:active {
   transform: scale(0.98);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .primary {
@@ -27,6 +33,10 @@
   background: var(--color-accent-hover);
 }
 
+.primary:active {
+  background: var(--color-accent-active);
+}
+
 .secondary {
   background: transparent;
   color: var(--color-text);
@@ -34,5 +44,9 @@
 }
 
 .secondary:hover {
-  background: var(--color-surface-muted);
+  background: color-mix(in srgb, var(--color-text) 7%, transparent);
+}
+
+.secondary:active {
+  background: color-mix(in srgb, var(--color-text) 14%, transparent);
 }

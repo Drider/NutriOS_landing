@@ -4,6 +4,7 @@ export interface NavLink {
 }
 
 export interface HeroContent {
+  eyebrow: string
   title: string
   description: string
   primaryCta: string
@@ -20,6 +21,7 @@ export interface HeroContent {
 }
 
 export interface ProblemContent {
+  eyebrow: string
   title: string
   description: string
   fragmentedSteps: string[]
@@ -34,6 +36,7 @@ export interface ContextElement {
 }
 
 export interface ContextContent {
+  eyebrow: string
   title: string
   description: string
   elements: ContextElement[]
@@ -48,11 +51,13 @@ export interface HowItWorksStep {
 }
 
 export interface HowItWorksContent {
+  eyebrow: string
   title: string
   steps: HowItWorksStep[]
 }
 
 export interface ProductPreviewContent {
+  eyebrow: string
   title: string
   sidebarLinks: string[]
   headerLabels: { search: string; profile: string }
@@ -72,6 +77,7 @@ export interface PersonalizationExampleRow {
 }
 
 export interface PersonalizationContent {
+  eyebrow: string
   title: string
   description: string
   progression: string[]
@@ -86,6 +92,7 @@ export interface ChatMessage {
 }
 
 export interface AssistantContent {
+  eyebrow: string
   title: string
   description: string
   conversation: ChatMessage[]
@@ -98,12 +105,14 @@ export interface NutritionLoopFeature {
 }
 
 export interface NutritionLoopContent {
+  eyebrow: string
   title: string
   loopSteps: string[]
   features: NutritionLoopFeature[]
 }
 
 export interface SafetyContent {
+  eyebrow: string
   title: string
   shortDisclaimer: string
   extendedDisclaimer: string

@@ -1,14 +1,14 @@
 .section {
   padding-block: var(--space-9);
-  background: var(--color-surface-muted);
+  background: var(--color-surface);
 }
 
 .convergence {
   margin-top: var(--space-8);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-5);
+  align-items: stretch;
+  gap: var(--space-6);
 }
 
 .elements {
@@ -19,9 +19,26 @@
 }
 
 .elementCard {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.elementIcon {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-active);
+  display: grid;
+  place-items: center;
+}
+
+.elementCard:nth-child(even) .elementIcon {
+  background: var(--color-accent-2-soft);
+  color: var(--color-accent-2);
 }
 
 .elementTitle {
@@ -34,31 +51,33 @@
   line-height: var(--line-height-relaxed);
 }
 
-.chainArrow {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-xl);
-}
-
 .outcome {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3);
-  text-align: center;
+  gap: var(--space-4);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
 }
 
 .convergeLabel {
-  font-weight: 800;
-  font-size: var(--font-size-xl);
-  padding: var(--space-3) var(--space-6);
-  background: var(--color-accent);
-  color: var(--color-text-on-accent);
-  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: var(--font-size-base);
+}
+
+.outcomeArrow {
+  color: var(--color-accent);
+  flex: none;
 }
 
 .outcomeLabel {
-  font-weight: 700;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-active);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-pill);
 }
 
 @media (min-width: 768px) {

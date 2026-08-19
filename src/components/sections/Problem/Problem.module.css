@@ -8,10 +8,9 @@
   gap: var(--space-6);
 }
 
-.fragmented, .contrast {
+.fragmented {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: var(--space-6);
   display: flex;
   flex-direction: column;
@@ -19,13 +18,7 @@
   gap: var(--space-2);
 }
 
-.contrast {
-  background: var(--color-accent-soft);
-  border-color: transparent;
-  justify-content: center;
-}
-
-.fragmentedStep, .contrastStep {
+.fragmentedStep {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,33 +27,72 @@
 
 .stepLabel {
   font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  background: var(--color-surface-muted);
+  color: var(--color-text);
+  background: var(--color-bg);
   padding: var(--space-2) var(--space-4);
   border-radius: var(--radius-pill);
 }
 
 .arrow {
+  display: inline-flex;
   color: var(--color-text-muted);
+  transform: rotate(90deg);
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-accent);
+  transform: rotate(90deg);
+}
+
+.contrast {
+  background: var(--gradient-dark-soft);
+  color: var(--color-on-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
 }
 
 .contrastLabel {
-  font-weight: 800;
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--space-2);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-2);
+}
+
+.contrastStep {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.contrastDot {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.contrastDotAlt {
+  background: var(--color-accent-2);
 }
 
 .contrastStepLabel {
-  font-weight: 700;
-  padding: var(--space-2) var(--space-5);
-  background: var(--color-surface);
-  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: var(--font-size-lg);
 }
 
 @media (min-width: 1024px) {
   .diagrams {
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
+    grid-template-columns: 1.6fr auto 1fr;
+    align-items: center;
   }
 
   .fragmented {
@@ -73,7 +105,11 @@
     flex-direction: row;
   }
 
-  .fragmentedStep .arrow {
-    transform: rotate(-90deg);
+  .arrow {
+    transform: rotate(0deg);
+  }
+
+  .divider {
+    transform: rotate(0deg);
   }
 }

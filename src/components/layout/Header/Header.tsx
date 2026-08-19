@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Container } from '../Container/Container'
 import { Button } from '../../ui/Button/Button'
+import { Icon } from '../../ui/Icon/Icon'
 import { landingContent } from '../../../data/landing'
 import styles from './Header.module.css'
 
@@ -65,6 +66,9 @@ export function Header() {
       <Container>
         <div className={styles.bar}>
           <a href="#top" className={styles.logo}>
+            <span className={styles.logoMark}>
+              <Icon name="leaf" size={18} />
+            </span>
             {landingContent.logo}
           </a>
 
@@ -100,7 +104,12 @@ export function Header() {
             <div className={styles.overlay}>
               <div id="mobile-menu" ref={menuRef} className={styles.mobileMenu} role="dialog" aria-modal="true" aria-label="Мобильное меню">
                 <div className={styles.mobileMenuHeader}>
-                  <span className={styles.logo}>{landingContent.logo}</span>
+                  <span className={styles.logo}>
+                    <span className={styles.logoMark}>
+                      <Icon name="leaf" size={16} />
+                    </span>
+                    {landingContent.logo}
+                  </span>
                   <button type="button" className={styles.menuClose} onClick={closeMenu} aria-label="Закрыть меню">
                     Закрыть
                   </button>

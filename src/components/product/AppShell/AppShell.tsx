@@ -36,14 +36,18 @@ export function AppShell({
 }: AppShellProps) {
   return (
     <div className={styles.shell}>
-      <ProductHeader searchLabel={headerLabels.search} profileLabel={headerLabels.profile} />
-      <div className={styles.body}>
-        <ProductSidebar links={sidebarLinks} />
-        <div className={styles.main}>
-          <p className={styles.greeting}>{greeting}</p>
-          <MealPlan planLabel={planLabel} meals={meals} />
-          <PersonalContext label={contextLabel} items={contextItems} />
-          <AssistantPreview label={assistantLabel} prompt={assistantPrompt} />
+      <ProductSidebar links={sidebarLinks} />
+      <div className={styles.main}>
+        <ProductHeader searchLabel={headerLabels.search} profileLabel={headerLabels.profile} />
+        <div className={styles.content}>
+          <div className={styles.planColumn}>
+            <p className={styles.greeting}>{greeting}</p>
+            <MealPlan planLabel={planLabel} meals={meals} />
+          </div>
+          <div className={styles.sideColumn}>
+            <PersonalContext label={contextLabel} items={contextItems} />
+            <AssistantPreview label={assistantLabel} prompt={assistantPrompt} />
+          </div>
         </div>
       </div>
     </div>

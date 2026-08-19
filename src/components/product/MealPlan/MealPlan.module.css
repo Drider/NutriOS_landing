@@ -1,34 +1,47 @@
 .heading {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
+  font-size: var(--font-size-xl);
   margin-bottom: var(--space-3);
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-3);
-}
-
-.mealCard {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  background: var(--color-surface-muted);
+  gap: var(--space-2);
+}
+
+.mealRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface);
   border-radius: var(--radius-md);
-  padding: var(--space-3);
-  text-align: center;
+  padding: var(--space-3) var(--space-4);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.mealRow:nth-child(2) .dot {
+  background: var(--color-accent-2);
+}
+
+.mealRow:nth-child(3) .dot {
+  background: color-mix(in srgb, var(--color-text) 35%, transparent);
 }
 
 .mealLabel {
-  font-weight: 700;
-  font-size: var(--font-size-sm);
+  flex: 1;
+  font-weight: 600;
 }
 
 .mealTime {
-  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
 }

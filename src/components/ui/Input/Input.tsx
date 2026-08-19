@@ -4,16 +4,17 @@ import styles from './Input.module.css'
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string
   error?: string
+  hideLabel?: boolean
 }
 
-export function Input({ label, error, id, ...props }: InputProps) {
+export function Input({ label, error, hideLabel = false, id, ...props }: InputProps) {
   const generatedId = useId()
   const inputId = id ?? generatedId
   const errorId = `${inputId}-error`
 
   return (
     <div className={styles.field}>
-      <label htmlFor={inputId} className={styles.label}>
+      <label htmlFor={inputId} className={hideLabel ? styles.srOnly : styles.label}>
         {label}
       </label>
       <input

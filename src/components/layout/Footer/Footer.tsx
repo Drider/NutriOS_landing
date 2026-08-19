@@ -1,5 +1,6 @@
 // src/components/layout/Footer/Footer.tsx
 import { Container } from '../Container/Container'
+import { Icon } from '../../ui/Icon/Icon'
 import { landingContent } from '../../../data/landing'
 import styles from './Footer.module.css'
 
@@ -10,7 +11,12 @@ export function Footer() {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.top}>
-          <span className={styles.logo}>{logo}</span>
+          <span className={styles.logo}>
+            <span className={styles.logoMark}>
+              <Icon name="leaf" size={16} />
+            </span>
+            {logo}
+          </span>
           <nav className={styles.links} aria-label="Дополнительные ссылки">
             {footer.links.map((link) => (
               <a key={link.label} href={link.href} className={styles.link}>
