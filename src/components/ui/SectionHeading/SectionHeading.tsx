@@ -10,6 +10,7 @@ interface SectionHeadingProps {
   as?: 'h1' | 'h2' | 'h3'
   align?: 'left' | 'center'
   tone?: 'light' | 'dark'
+  compact?: boolean
   id?: string
 }
 
@@ -21,12 +22,13 @@ export function SectionHeading({
   as = 'h2',
   align = 'left',
   tone = 'light',
+  compact = false,
   id,
 }: SectionHeadingProps) {
   const Heading = as
   return (
     <div
-      className={`${styles.wrapper} ${align === 'center' ? styles.center : ''} ${tone === 'dark' ? styles.dark : ''}`}
+      className={`${styles.wrapper} ${align === 'center' ? styles.center : ''} ${tone === 'dark' ? styles.dark : ''} ${compact ? styles.compact : ''}`}
     >
       {eyebrow ? (
         <span className={styles.eyebrow}>

@@ -27,7 +27,7 @@
 .title {
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-tight);
-  max-width: 14ch;
+  max-width: 20ch;
 }
 
 .description {

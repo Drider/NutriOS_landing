@@ -6,8 +6,7 @@
   margin-top: var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
-  position: relative;
+  gap: var(--space-7);
 }
 
 .step {
@@ -17,12 +16,18 @@
 }
 
 .number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
-  font-size: 2.75rem;
-  line-height: 1;
+  font-size: var(--font-size-lg);
   color: var(--color-accent);
-  margin-bottom: var(--space-2);
 }
 
 .stepTitle {
@@ -39,9 +44,26 @@
 @media (min-width: 1024px) {
   .steps {
     flex-direction: row;
+    position: relative;
+    gap: var(--space-6);
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: var(--color-border);
   }
 
   .step {
     flex: 1;
+  }
+
+  .number {
+    position: relative;
+    background: var(--color-bg);
   }
 }

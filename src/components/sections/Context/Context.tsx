@@ -26,7 +26,6 @@ export function Context() {
         <SectionHeading
           as="h2"
           id="context-heading"
-          eyebrow={context.eyebrow}
           title={context.title}
           description={context.description}
         />

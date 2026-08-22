@@ -7,39 +7,6 @@
   gap: var(--space-8);
 }
 
-.progression {
-  margin-top: var(--space-6);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.progressionItem {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.progressionArrow {
-  color: var(--color-accent);
-  flex: none;
-}
-
-.progressionStep {
-  font-family: var(--font-heading);
-  font-weight: var(--font-heading-weight);
-  font-size: var(--font-size-sm);
-  background: var(--color-surface);
-  border-radius: var(--radius-pill);
-  padding: var(--space-2) var(--space-4);
-}
-
-.progressionFinal {
-  background: var(--color-accent);
-  color: var(--color-text-on-accent);
-}
-
 .exampleCard {
   display: flex;
   flex-direction: column;

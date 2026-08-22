@@ -19,7 +19,6 @@ export function ProductPreview() {
           <SectionHeading
             as="h2"
             id="product-preview-heading"
-            eyebrow={productPreview.eyebrow}
             title={productPreview.title}
             align="center"
             tone="dark"

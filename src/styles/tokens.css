@@ -3,7 +3,7 @@
   --color-surface: #E6F0E6;
   --color-text: #18211B;
   --color-text-muted: color-mix(in srgb, var(--color-text) 70%, transparent);
-  --color-text-on-accent: var(--color-bg);
+  --color-text-on-accent: #FFFFFF;
 
   --color-accent: #2F8050;
   --color-accent-hover: #2B7249;

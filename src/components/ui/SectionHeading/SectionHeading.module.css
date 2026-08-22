@@ -50,3 +50,7 @@
 .dark .eyebrow {
   color: var(--color-accent-2);
 }
+
+.compact .title {
+  font-size: var(--font-size-2xl);
+}

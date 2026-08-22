@@ -1,7 +1,6 @@
 // src/components/sections/NutritionLoop/NutritionLoop.tsx
 import { Container } from '../../layout/Container/Container'
 import { SectionHeading } from '../../ui/SectionHeading/SectionHeading'
-import { Card } from '../../ui/Card/Card'
 import { Icon, type IconName } from '../../ui/Icon/Icon'
 import { useScrollReveal } from '../../../hooks/useScrollReveal'
 import { landingContent } from '../../../data/landing'
@@ -25,7 +24,6 @@ export function NutritionLoop() {
         <SectionHeading
           as="h2"
           id="nutrition-loop-heading"
-          eyebrow={nutritionLoop.eyebrow}
           title={nutritionLoop.title}
           align="center"
         />
@@ -48,17 +46,19 @@ export function NutritionLoop() {
           ))}
         </div>
 
-        <div className={styles.features}>
+        <ul className={styles.features}>
           {nutritionLoop.features.map((feature) => (
-            <Card key={feature.title} className={styles.featureCard}>
+            <li key={feature.title} className={styles.featureItem}>
               <span className={styles.featureIcon}>
                 <Icon name={FEATURE_ICONS[feature.title] ?? 'sparkle'} />
               </span>
-              <h3 className={styles.featureTitle}>{feature.title}</h3>
-              <p className={styles.featureDescription}>{feature.description}</p>
-            </Card>
+              <div>
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                <p className={styles.featureDescription}>{feature.description}</p>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   )

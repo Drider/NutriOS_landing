@@ -14,10 +14,9 @@ export function Safety() {
           <SectionHeading
             as="h2"
             id="safety-heading"
-            eyebrow={safety.eyebrow}
-            icon="shield"
             title={safety.title}
             description={safety.shortDisclaimer}
+            compact
           />
           <div className={styles.panel}>
             <p className={styles.extended}>{safety.extendedDisclaimer}</p>

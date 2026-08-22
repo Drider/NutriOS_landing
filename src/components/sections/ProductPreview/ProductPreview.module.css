@@ -6,6 +6,12 @@
   padding-block: var(--space-9);
 }
 
+@media (min-width: 1024px) {
+  .backdrop {
+    padding-block: 128px;
+  }
+}
+
 .shellWrapper {
   margin-top: var(--space-8);
   max-width: 960px;

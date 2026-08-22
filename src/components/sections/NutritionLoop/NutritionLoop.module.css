@@ -39,14 +39,13 @@
 .features {
   margin-top: var(--space-8);
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 
-.featureCard {
+.featureItem {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .featureIcon {
@@ -60,13 +59,14 @@
   place-items: center;
 }
 
-.featureCard:nth-child(even) .featureIcon {
+.featureItem:nth-child(even) .featureIcon {
   background: var(--color-accent-2-soft);
   color: var(--color-accent-2);
 }
 
 .featureTitle {
   font-size: var(--font-size-lg);
+  margin-bottom: var(--space-1);
 }
 
 .featureDescription {
@@ -78,11 +78,6 @@
 @media (min-width: 768px) {
   .features {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .features {
-    grid-template-columns: repeat(4, 1fr);
+    column-gap: var(--space-8);
   }
 }

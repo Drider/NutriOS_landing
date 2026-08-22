@@ -17,7 +17,6 @@ export function Problem() {
         <SectionHeading
           as="h2"
           id="problem-heading"
-          eyebrow={problem.eyebrow}
           title={problem.title}
           description={problem.description}
         />
