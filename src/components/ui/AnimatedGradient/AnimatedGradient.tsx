@@ -177,20 +177,44 @@ export function AnimatedGradient({
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    let rafId = 0
     if (prefersReducedMotion) {
       draw(0)
-    } else {
-      const render = (time: number) => {
-        draw(time * 0.001 * speed)
-        rafId = requestAnimationFrame(render)
-      }
+      return () => resizeObserver.disconnect()
+    }
+
+    let rafId = 0
+    let isRunning = false
+
+    const render = (time: number) => {
+      draw(time * 0.001 * speed)
       rafId = requestAnimationFrame(render)
     }
 
+    const startLoop = () => {
+      if (isRunning) return
+      isRunning = true
+      rafId = requestAnimationFrame(render)
+    }
+
+    const stopLoop = () => {
+      isRunning = false
+      cancelAnimationFrame(rafId)
+    }
+
+    const visibilityObserver = new IntersectionObserver((entries) => {
+      const entry = entries[0]
+      if (entry.isIntersecting) {
+        startLoop()
+      } else {
+        stopLoop()
+      }
+    })
+    visibilityObserver.observe(container)
+
     return () => {
       resizeObserver.disconnect()
-      cancelAnimationFrame(rafId)
+      visibilityObserver.disconnect()
+      stopLoop()
     }
   }, [bg, colors, speed, grain])
 
