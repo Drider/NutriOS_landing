@@ -11,7 +11,7 @@ import styles from './FinalCTA.module.css'
 
 export function FinalCTA() {
   const { finalCta } = landingContent
-  const { email, setEmail, status, errorMessage, handleSubmit } = useWaitlistForm()
+  const { email, setEmail, status, errorMessage, handleSubmit, emailInputRef } = useWaitlistForm()
   const successRef = useRef<HTMLParagraphElement>(null)
 
   useEffect(() => {
@@ -46,6 +46,7 @@ export function FinalCTA() {
             {status !== 'success' ? (
               <form className={styles.form} onSubmit={handleSubmit} noValidate>
                 <Input
+                  ref={emailInputRef}
                   label={finalCta.emailLabel}
                   hideLabel
                   type="email"

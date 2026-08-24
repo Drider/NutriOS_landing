@@ -14,8 +14,11 @@ import { FinalCTA } from './components/sections/FinalCTA/FinalCTA'
 function App() {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Перейти к содержимому
+      </a>
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Problem />
         <Context />

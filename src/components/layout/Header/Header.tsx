@@ -91,7 +91,6 @@ export function Header() {
             type="button"
             className={styles.menuTrigger}
             aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
             onClick={() => setIsMenuOpen(true)}
           >
             Меню

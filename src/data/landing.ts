@@ -29,9 +29,9 @@ export const landingContent: LandingContent = {
       ],
       contextLabel: 'Личный контекст',
       contextItems: [
-        '30 минут на готовку',
-        '2 ингредиента нужно использовать',
-        '3 приёма пищи запланировано',
+        '30 минут на готовку',
+        '2 ингредиента нужно использовать',
+        '3 приёма пищи запланировано',
       ],
       assistantLabel: 'Спросить NutriOS',
       assistantPrompt: 'Что изменить на сегодняшний вечер?',
@@ -119,7 +119,7 @@ export const landingContent: LandingContent = {
       { key: 'dinner', label: 'Ужин', time: '19:00' },
     ],
     contextLabel: 'Личный контекст',
-    contextItems: ['30 минут на готовку', '2 ингредиента нужно использовать'],
+    contextItems: ['30 минут на готовку', '2 ингредиента нужно использовать'],
     assistantLabel: 'Ассистент NutriOS',
     assistantPrompt: 'Что изменить на сегодняшний вечер?',
   },
@@ -130,8 +130,8 @@ export const landingContent: LandingContent = {
     example: [
       { key: 'profile', label: 'Профиль', value: 'Вегетарианец' },
       { key: 'preferences', label: 'Предпочтения', value: 'Блюда с высоким содержанием белка' },
-      { key: 'history', label: 'История', value: '12 сохранённых блюд' },
-      { key: 'daily', label: 'Дневной контекст', value: '20 минут в запасе' },
+      { key: 'history', label: 'История', value: '12 сохранённых блюд' },
+      { key: 'daily', label: 'Дневной контекст', value: '20 минут в запасе' },
     ],
     recommendationLabel: 'Рекомендация',
     recommendationValue: 'Быстрый ужин с учётом ваших предпочтений',
@@ -141,10 +141,10 @@ export const landingContent: LandingContent = {
     description:
       'Получайте практичные ответы на основе вашего личного контекста — а не обобщённый диалог.',
     conversation: [
-      { role: 'user', text: 'Сегодня у меня есть только 20 минут.' },
+      { role: 'user', text: 'Сегодня у меня есть только 20 минут.' },
       {
         role: 'assistant',
-        text: 'Скорректируем ужин. Вот 3 варианта, которые подойдут по времени.',
+        text: 'Скорректируем ужин. Вот 3 варианта, которые подойдут по времени.',
       },
     ],
     examplePrompts: [
@@ -184,7 +184,7 @@ export const landingContent: LandingContent = {
     emailLabel: 'Электронная почта',
     emailPlaceholder: 'you@example.com',
     submitLabel: 'Записаться в лист ожидания',
-    loadingLabel: 'Отправляем...',
+    loadingLabel: 'Отправляем…',
     errorMessage: 'Пожалуйста, введите корректный email-адрес.',
     successMessage: 'Вы в списке. Мы сообщим, когда NutriOS будет готов.',
   },

@@ -1,4 +1,4 @@
-import { useId, type InputHTMLAttributes } from 'react'
+import { forwardRef, useId, type InputHTMLAttributes } from 'react'
 import styles from './Input.module.css'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -7,7 +7,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   hideLabel?: boolean
 }
 
-export function Input({ label, error, hideLabel = false, id, ...props }: InputProps) {
+export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
+  { label, error, hideLabel = false, id, ...props },
+  ref,
+) {
   const generatedId = useId()
   const inputId = id ?? generatedId
   const errorId = `${inputId}-error`
@@ -18,6 +21,7 @@ export function Input({ label, error, hideLabel = false, id, ...props }: InputPr
         {label}
       </label>
       <input
+        ref={ref}
         id={inputId}
         className={`${styles.input} ${error ? styles.inputError : ''}`}
         aria-invalid={Boolean(error)}
@@ -31,4 +35,4 @@ export function Input({ label, error, hideLabel = false, id, ...props }: InputPr
       ) : null}
     </div>
   )
-}
+})
