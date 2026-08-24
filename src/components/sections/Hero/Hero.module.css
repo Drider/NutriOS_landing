@@ -28,6 +28,7 @@
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-tight);
   max-width: 20ch;
+  text-wrap: balance;
 }
 
 .description {
