@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { Header } from './components/layout/Header/Header'
 import { Footer } from './components/layout/Footer/Footer'
 import { Hero } from './components/sections/Hero/Hero'
@@ -31,6 +32,7 @@ function App() {
         <FinalCTA />
       </main>
       <Footer />
+      <Analytics />
     </>
   )
 }
