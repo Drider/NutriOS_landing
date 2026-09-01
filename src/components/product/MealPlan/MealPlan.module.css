@@ -2,6 +2,7 @@
   font-family: var(--font-heading);
   font-weight: var(--font-heading-weight);
   font-size: var(--font-size-xl);
+  color: var(--color-text);
   margin-bottom: var(--space-3);
 }
 
@@ -39,6 +40,7 @@
 .mealLabel {
   flex: 1;
   font-weight: 600;
+  color: var(--color-text);
 }
 
 .mealTime {
